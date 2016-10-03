@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="480.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myshop.inventory.MyInventoryController">
+   <top>
+      <Label text="My Shop Inventory" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <TableView fx:id="table" editable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="prodColumn" style="-fx-alignment: CENTER;" text="Product Id" />
+          <TableColumn fx:id="nameColumn" prefWidth="263.0" style="-fx-alignment: CENTER;" text="Product Name" />
+          <TableColumn fx:id="quantityColumn" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Quantity" />
+          <TableColumn fx:id="rateColumn" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Rate" />
+          <TableColumn fx:id="totalAmountColumn" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Total Amount" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+</BorderPane>

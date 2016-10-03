@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="480.0" prefWidth="600.0" styleClass="background" stylesheets="@modena.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myshop.view.MainViewController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane alignment="CENTER" prefHeight="40.0" prefWidth="638.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="299.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="525.0" minWidth="10.0" prefWidth="190.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="111.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#goHomeBtn" prefHeight="33.0" prefWidth="132.0" text="HOME" GridPane.columnIndex="1" />
+                  <Label fx:id="cuurDateLabel" alignment="TOP_LEFT" text="Label" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </GridPane>
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <HBox prefHeight="400.0" prefWidth="160.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="140.0" spacing="10.0">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Label fx:id="addNewProductLabel" onMouseClicked="#goAddNewProdLabel" onMouseEntered="#onHoverAddNewProductLabel" onMouseExited="#onCloseHoverAddNewProductLabel" text="Add New Product To Store" wrapText="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="addNewCustomerOrSellerLabel" onMouseClicked="#goAddDealerNCustomerLabel" onMouseEntered="#onHoverAddNewCustomerOrSellerLabel" onMouseExited="#onCloseHoverAddNewCustomerOrSellerLabel" text="Add New Customer Or Seller" wrapText="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="viewCustomersLabel" onMouseEntered="#onHoverViewCustomerLabel" onMouseExited="#onCloseHoverViewCustomerLabel" text="View Customers">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="viewSuppliersLabel" onMouseEntered="#onHoverViewSellerLabel" onMouseExited="#onCloseHoverViewSupplierLabel" text="View Suppliers">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="viewAllProducts" onMouseEntered="#onHoverViewAllProductsLabel" onMouseExited="#onCloseHoverViewAllProductLabel" text="View All Products">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+               </children></VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+         </children>
+      </HBox>
+   </left>
+   <top>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="label-header" stylesheets="@modena.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label onMouseClicked="#goHomeBtn" stylesheets="@modena.css" text="NEW JILANI AUTOS" textFill="#7c6969">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Label>
+         </children></HBox>
+   </top>
+   <right>
+      <HBox prefHeight="390.0" prefWidth="180.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="390.0" prefWidth="160.0" spacing="10.0">
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Label fx:id="accountPayableViewLabel" onMouseClicked="#openAccountPayable" onMouseEntered="#onHoverAccPayableLabel" onMouseExited="#onCloseHoveraccpayableLabel" text="Account Payable">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="accountReceivableViewLabel" onMouseClicked="#openAccountRecievable" onMouseEntered="#onHoverAccReceivableLabel" onMouseExited="#onCloseHoveraccReceivableLabel" text="Account Recievable">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="purchaseHistoryLabel" onMouseClicked="#openPurchaseHistory" onMouseEntered="#onHoverPurchaseHistoryLabel" onMouseExited="#onCloseHoverPurchaseHistoryLabel" text="Purchase History">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="salesHistoryLabel" onMouseClicked="#openSalesHistory" onMouseEntered="#onHoverSalesHistoryLabel" onMouseExited="#onCloseHoverSalesHistoryLabel" text="Sales History">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="cashBookLabel" onMouseEntered="#onHoverCashBookLabel" onMouseExited="#onCloseHoverCashBookLabel" text="Cash Book">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Label fx:id="inventoryLabel" onMouseClicked="#openInventoryLabel" onMouseEntered="#onHoverInventotyLabel" onMouseExited="#onCloseHoverinventoryLabel" text="Inventory / Stock">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </right>
+</BorderPane>

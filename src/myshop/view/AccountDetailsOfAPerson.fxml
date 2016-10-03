@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="480.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myshop.view.AccountDetailsOfAPersonController">
+   <top>
+      <Label text="Account Payable" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <TableView fx:id="table" editable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="dateColumn" style="-fx-alignment: CENTER;" text="Date" />
+          <TableColumn fx:id="supplierIdColumn" prefWidth="263.0" style="-fx-alignment: CENTER;" text="Supplier ID" />
+          <TableColumn fx:id="supplierNameColumn" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Supplier Name" />
+          <TableColumn fx:id="debitColumn" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Debit" />
+          <TableColumn fx:id="creditColumn" prefWidth="75.0" style="-fx-alignment: CENTER;" text="Credit" />
+            <TableColumn fx:id="balanceColumn" prefWidth="75.0" text="Balance" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+</BorderPane>
