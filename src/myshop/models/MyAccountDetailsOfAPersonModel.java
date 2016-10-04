@@ -17,6 +17,7 @@ public class MyAccountDetailsOfAPersonModel {
 		this.Balance = balance;
 	}
 	public String getDate() {
+		System.out.println();
 		return date;
 	}
 	public void setDate(String date) {
