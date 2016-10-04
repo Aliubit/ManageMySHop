@@ -201,7 +201,18 @@ public class SalesInvoiceController implements Initializable{
 
 	public void setScene(Scene scene) {
 		this.scene = scene;
-		
+		scene.setOnKeyPressed(
+				event->{
+					switch(event.getCode()){
+					case ENTER:
+						System.out.println("manhoos add ");
+					case ESCAPE:
+						cancelButtonPressed();
+					default:
+						break;
+					}
+				}
+			);
 	}
 	
 }
